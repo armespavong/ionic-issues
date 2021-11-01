@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { ChangeDetectorRef, Component, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-footer-button',
@@ -9,7 +9,9 @@ export class FooterButtonPage implements OnInit {
 
   buttonDisabled: boolean = true;
 
-  constructor() { }
+  constructor(
+    private changeRef: ChangeDetectorRef,
+  ) { }
 
   ngOnInit() {
   }
@@ -20,6 +22,7 @@ export class FooterButtonPage implements OnInit {
     } else {
       this.buttonDisabled = false;
     }
+    this.changeRef.detectChanges();
   }
 
 }
