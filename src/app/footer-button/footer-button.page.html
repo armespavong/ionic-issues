@@ -1,0 +1,28 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>footer-button</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <div id="container">
+    <ion-button (click)="toggleDisable()">
+      Toggle Button Disabled in Footer
+      ({{ buttonDisabled ? 'TRUE' : 'FALSE' }})
+    </ion-button>
+    <br />
+    <ion-buttons>
+      <ion-button [disabled]="buttonDisabled">
+        Test Disabled Opacity
+      </ion-button>
+    </ion-buttons>
+  </div>
+</ion-content>
+
+<ion-footer class="ion-text-center">
+  <ion-buttons>
+    <ion-button [disabled]="buttonDisabled">
+      Test Disabled Opacity
+    </ion-button>
+  </ion-buttons>
+</ion-footer>
