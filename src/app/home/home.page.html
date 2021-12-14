@@ -1,21 +1,26 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
     <ion-title>
-      Blank
+      Popover
     </ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Blank</ion-title>
-    </ion-toolbar>
-  </ion-header>
 
   <div id="container">
-    <ion-button [routerLink]="[ '/footer-button' ]">
-      ion-button disabled issue
-    </ion-button>
+    <i id="trigger-button">Open 1</i>
+    <ion-popover trigger="trigger-button" mode="ios" [arrow]="true" [isOpen]="true">
+      <ng-template>
+        <ion-content>Popover Content</ion-content>
+      </ng-template>
+    </ion-popover>
+    <i id="trigger-button-2">Open 2</i>
+    <ion-popover trigger="trigger-button-2" mode="ios" [arrow]="true">
+      <ng-template>
+        <ion-content>Popover Content</ion-content>
+      </ng-template>
+    </ion-popover>
   </div>
+
 </ion-content>
